@@ -485,9 +485,9 @@ void PacketSender::UpdateNetstateByTrace()
 
     // Initialize storing variables
     std::string trace_line;
-    std::vector<std::string> trace_data;
-    std::vector<std::string> bw_value;
-    std::vector<std::string> rtt_value;
+    StringVector trace_data;
+    StringVector bw_value;
+    StringVector rtt_value;
     uint16_t rtt;
     double_t bw;
     double_t lr;
@@ -500,9 +500,9 @@ void PacketSender::UpdateNetstateByTrace()
         rtt_value.clear();
         bw_value.clear();
         trace_data.clear();
-        SplitString(trace_line, trace_data," ");
-        SplitString(trace_data[0], bw_value, "Mbps");
-        SplitString(trace_data[1], rtt_value, "ms");
+        trace_data = SplitString(trace_line, " ");
+        bw_value = SplitString(trace_data[0], "Mbps");
+        rtt_value = SplitString(trace_data[1], "ms");
         rtt = (uint16_t) std::atof(rtt_value[0].c_str());
         bw = std::atof(bw_value[0].c_str());
         lr = std::atof(trace_data[2].c_str());

@@ -130,9 +130,9 @@ void BandwidthTrace (Ptr<Node> node0,
 
   if (readNewLine) {
     std::string traceLine;
-    std::vector<std::string> traceData;
-    std::vector<std::string> bwValue;
-    std::vector<std::string> rttValue;
+    StringVector traceData;
+    StringVector bwValue;
+    StringVector rttValue;
 
     traceLine.clear ();
     traceFile.open (trace);
@@ -146,9 +146,9 @@ void BandwidthTrace (Ptr<Node> node0,
     rttValue.clear ();
     bwValue.clear ();
     traceData.clear ();
-    SplitString (traceLine, traceData," ");
-    SplitString (traceData[0], bwValue, "Mbps");
-    SplitString (traceData[1], rttValue, "ms");
+    traceData = SplitString(traceLine, " ");
+    bwValue = SplitString(traceData[0], "Mbps");
+    rttValue = SplitString(traceData[1], "ms");
     
     /* Set delay of n0-n1 as rtt/2 - 1, the delay of n1-n2 is 1ms */ 
     newDelay = std::stod (rttValue[0]) / 2. - 1;
