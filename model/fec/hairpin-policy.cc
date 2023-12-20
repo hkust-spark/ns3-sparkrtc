@@ -11,7 +11,7 @@ HairpinPolicy::HairpinPolicy (uint16_t delayDdl, double_t qoeCoeff, bool isRtx, 
 : FECPolicy(MilliSeconds(1)) 
 , k_betaArraySize {462825}
 , k_blockArraySize {7209972}
-, k_paramDir {"./src/ns3-sparkrtc/model/fec/"} 
+, k_paramDir {"./src/sparkrtc/model/fec/"} 
 , m_isBlockSizeOpt {false} {
     k_qoeCoeff = qoeCoeff;
     k_delayDdl = delayDdl;
@@ -45,7 +45,7 @@ HairpinPolicy::~HairpinPolicy() {};
 TypeId HairpinPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::HairpinPolicy")
         .SetParent<FECPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<HairpinPolicy> ()
     ;
     return tid;

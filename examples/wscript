@@ -5,5 +5,5 @@ def build(bld):
         return;
 
     obj = bld.create_ns3_program('rtc-test',
-        ['applications', 'point-to-point', 'internet', 'network', 'ns3-sparkrtc'])
+        ['applications', 'point-to-point', 'internet', 'network', 'sparkrtc'])
     obj.source = 'rtc-test.cc'

@@ -1,7 +1,7 @@
 ## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
 
 def build(bld):
-    module = bld.create_ns3_module('ns3-sparkrtc', ['internet', 'network'])
+    module = bld.create_ns3_module('sparkrtc', ['internet', 'network'])
     module.source = [
         'model/game-client.cc',
         'model/game-server.cc',
@@ -25,7 +25,7 @@ def build(bld):
         ]
 
     headers = bld(features='ns3header')
-    headers.module = 'ns3-sparkrtc'
+    headers.module = 'sparkrtc'
     headers.source = [
         'model/common-header.h',
         'model/game-client.h',

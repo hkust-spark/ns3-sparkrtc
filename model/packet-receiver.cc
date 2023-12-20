@@ -7,7 +7,7 @@ NS_LOG_COMPONENT_DEFINE("PacketReceiver");
 TypeId PacketReceiver::GetTypeId() {
     static TypeId tid = TypeId ("ns3::PacketReceiver")
         .SetParent<Object> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };

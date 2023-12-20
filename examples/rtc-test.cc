@@ -5,7 +5,7 @@
 #include "ns3/network-module.h"
 #include "ns3/ipv4-global-routing-helper.h"
 #include "ns3/nstime.h"
-#include "ns3/ns3-sparkrtc-module.h"
+#include "ns3/sparkrtc-module.h"
 #include "ns3/flow-monitor-module.h"
 #include "ns3/common-header.h"
 
@@ -34,7 +34,7 @@ const uint32_t DEFAULT_RECEIVER_WINDOW = 34; // in ms
 
 const float    EMULATION_DURATION = 300.; // in s
 
-std::string DEFAULT_TRACE = "./src/ns3-sparkrtc/examples/sample.tr";
+std::string DEFAULT_TRACE = "./src/sparkrtc/examples/sample.tr";
 
 // Network topology
 //
