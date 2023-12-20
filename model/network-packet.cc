@@ -10,7 +10,7 @@ NS_OBJECT_ENSURE_REGISTERED (NetworkPacket);
 TypeId NetworkPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::NetworkPacket")
         .SetParent<Object> ()
-        .SetGroupName ("ns3-sparkrtc")
+        .SetGroupName ("sparkrtc")
         .AddAttribute ("MaxPacketSize", "The size of the packet",
                        UintegerValue (1460),
                        MakeUintegerAccessor (&NetworkPacket::MAX_PACKET_SIZE),
@@ -87,7 +87,7 @@ Ptr<Packet> NetworkPacket::ToNetPacket () {
 TypeId VideoPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::VideoPacket")
         .SetParent<NetworkPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };
@@ -164,7 +164,7 @@ DataPktDigest::DataPktDigest(Ptr<DataPacket> pkt) {
 TypeId DataPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::DataPacket")
         .SetParent<VideoPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };
@@ -227,7 +227,7 @@ uint16_t DataPacket::GetDataGlobalId () { return m_dataGlobalId; };
 TypeId DupFECPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::DupFECPacket")
         .SetParent<DataPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };
@@ -251,7 +251,7 @@ DupFECPacket::DupFECPacket(uint32_t frame_id, uint16_t frame_pkt_num, uint16_t p
 TypeId FECPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::FECPacket")
         .SetParent<VideoPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };
@@ -299,7 +299,7 @@ void FECPacket::SetDataPackets(std::vector<Ptr<DataPacket>> data_pkts) {
 TypeId ControlPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::ControlPacket")
         .SetParent<NetworkPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };
@@ -316,7 +316,7 @@ Ptr<Packet> ControlPacket::ToNetPacket () {
 TypeId AckPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::AckPacket")
         .SetParent<ControlPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<AckPacket> ()
     ;
     return tid;
@@ -364,7 +364,7 @@ uint16_t AckPacket::GetLastPktId() {
 TypeId FrameAckPacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::FrameAckPacket")
         .SetParent<ControlPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<FrameAckPacket> ()
     ;
     return tid;
@@ -409,7 +409,7 @@ Time FrameAckPacket::GetFrameEncodeTime() {
 TypeId NetStatePacket::GetTypeId() {
     static TypeId tid = TypeId ("ns3::NetStatePacket")
         .SetParent<ControlPacket> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<NetStatePacket> ()
     ;
     return tid;

@@ -4,7 +4,7 @@ find_package(Boost REQUIRED
 include_directories(${Boost_INCLUDE_DIRS})
 
 build_lib(
-  LIBNAME ns3-sparkrtc
+  LIBNAME sparkrtc
   SOURCE_FILES
     model/game-client.cc
     model/game-server.cc

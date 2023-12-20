@@ -6,7 +6,7 @@ NS_LOG_COMPONENT_DEFINE("VideoDecoder");
 TypeId VideoFrame::GetTypeId() {
     static TypeId tid = TypeId ("ns3::VideoFrame")
         .SetParent<Object> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };
@@ -52,7 +52,7 @@ Time VideoFrame::GetLastRcvTime() {
 TypeId VideoDecoder::GetTypeId() {
     static TypeId tid = TypeId ("ns3::VideoDecoder")
         .SetParent<Object> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<VideoDecoder> ()
     ;
     return tid;

@@ -7,7 +7,7 @@ NS_LOG_COMPONENT_DEFINE("GameClient");
 TypeId GameClient::GetTypeId() {
     static TypeId tid = TypeId ("ns3::GameClient")
         .SetParent<Application> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<GameClient>()
     ;
     return tid;

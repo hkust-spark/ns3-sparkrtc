@@ -49,7 +49,7 @@ double_t LossEstimator::GetLoss (Time now) {
 TypeId GameServer::GetTypeId() {
   static TypeId tid = TypeId ("ns3::GameServer")
     .SetParent<Application> ()
-    .SetGroupName("ns3-sparkrtc")
+    .SetGroupName("sparkrtc")
     .AddConstructor<GameServer>()
   ;
   return tid;
@@ -205,7 +205,7 @@ uint32_t GameServer::GetNextFrameId() { return m_nextFrameId ++; };
 TypeId GameServer::UnFECedPackets::GetTypeId() {
   static TypeId tid = TypeId ("ns3::GameServer::UnFECedPackets")
     .SetParent<Object> ()
-    .SetGroupName("ns3-sparkrtc")
+    .SetGroupName("sparkrtc")
     .AddConstructor<GameServer::UnFECedPackets> ()
   ;
   return tid;

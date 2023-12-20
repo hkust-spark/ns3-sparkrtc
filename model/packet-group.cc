@@ -6,7 +6,7 @@ NS_LOG_COMPONENT_DEFINE("PacketBatch");
 TypeId PacketBatch::GetTypeId() {
     static TypeId tid = TypeId ("ns3::PacketBatch")
         .SetParent<Object> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };
@@ -101,7 +101,7 @@ std::vector<Ptr<DataPacket>> PacketBatch::GetUndecodedPackets() {
 TypeId PacketGroup::GetTypeId() {
     static TypeId tid = TypeId ("ns3::PacketGroup")
         .SetParent<Object> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };

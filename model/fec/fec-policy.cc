@@ -16,7 +16,7 @@ FECPolicy::FECParam::~FECParam() {};
 TypeId FECPolicy::NetStat::GetTypeId() {
     static TypeId tid = TypeId ("ns3::FECPolicy::NetStat")
         .SetParent<Object> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<FECPolicy::NetStat> ()
     ;
     return tid;
@@ -38,7 +38,7 @@ FECPolicy::~FECPolicy() {};
 TypeId FECPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::FECPolicy")
         .SetParent<Object> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
     ;
     return tid;
 };

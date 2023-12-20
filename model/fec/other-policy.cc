@@ -17,7 +17,7 @@ FixedPolicy::~FixedPolicy () {};
 TypeId FixedPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::FixedPolicy")
         .SetParent<FECPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<FixedPolicy> ()
     ;
     return tid;
@@ -46,7 +46,7 @@ FixedRtxPolicy::~FixedRtxPolicy () {};
 TypeId FixedRtxPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::FixedRtxPolicy")
         .SetParent<FixedPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<FixedRtxPolicy> ()
     ;
     return tid;
@@ -75,7 +75,7 @@ TokenRtxPolicy::~TokenRtxPolicy () {};
 TypeId TokenRtxPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::TokenRtxPolicy")
         .SetParent<FixedPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<TokenRtxPolicy> ()
     ;
     return tid;
@@ -121,7 +121,7 @@ RtxOnlyPolicy::~RtxOnlyPolicy() {};
 TypeId RtxOnlyPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::RtxOnlyPolicy")
         .SetParent<FECPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<RtxOnlyPolicy> ()
     ;
     return tid;
@@ -139,7 +139,7 @@ PtoOnlyPolicy::~PtoOnlyPolicy () {};
 TypeId PtoOnlyPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::PtoOnlyPolicy")
         .SetParent<FECPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<PtoOnlyPolicy> ()
     ;
     return tid;
@@ -182,7 +182,7 @@ BolotPolicy::~BolotPolicy() {};
 TypeId BolotPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::BolotPolicy")
         .SetParent<FECPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<BolotPolicy> ()
     ;
     return tid;
@@ -244,7 +244,7 @@ UsfPolicy::~UsfPolicy() {};
 TypeId UsfPolicy::GetTypeId() {
     static TypeId tid = TypeId ("ns3::UsfPolocy")
         .SetParent<FECPolicy> ()
-        .SetGroupName("ns3-sparkrtc")
+        .SetGroupName("sparkrtc")
         .AddConstructor<UsfPolicy> ()
     ;
     return tid;
