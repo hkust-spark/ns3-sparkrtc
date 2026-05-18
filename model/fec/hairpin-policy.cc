@@ -12,7 +12,9 @@ HairpinPolicy::HairpinPolicy (uint16_t delayDdl, double_t qoeCoeff, bool isRtx, 
 , k_betaArraySize {462825}
 , k_blockArraySize {7209972}
 , k_paramDir {"./src/sparkrtc/model/fec/"} 
-, m_isBlockSizeOpt {false} {
+, m_isBlockSizeOpt {false}
+, m_isRtx {isRtx}
+, m_isCap {isCap} {
     k_qoeCoeff = qoeCoeff;
     k_delayDdl = delayDdl;
     this->pacing_flag = false;
